@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package video;
+
+service VideoService {
+    rpc Upload(stream UploadRequest) returns (UploadResponse) {}
+}
+
+message UploadRequest {
+    bytes video_data = 1;
+}
+
+message UploadResponse {}
